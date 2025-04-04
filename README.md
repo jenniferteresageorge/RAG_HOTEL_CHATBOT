@@ -13,7 +13,73 @@ This project is a Retrieval-Augmented Generation (RAG) based chatbot built using
   - `/api/analytics?metric=<metric>` – Provides pre-computed analytics such as revenue trend, cancellation rate, etc.
 
 ---
+## API ENDPOINTS
+(RESPONSES IN POSTMAN)
+1. Root
+GET /
+Returns a simple status check.
 
+Response: { "message": "API is running" }
+
+2. Ask a Question
+POST /api/ask
+
+Request Body (JSON):
+{
+  "query": "What is the cancellation policy?"
+}
+
+Expected Response:
+{
+  "response": "The cancellation policy varies by hotel. Most allow free cancellation up to 24 hours before check-in."
+}
+
+3. Analytics
+GET /api/analytics?metric=
+
+Available values for metric:
+
+revenue_trend
+
+cancellation_rate
+
+geographical_distribution
+
+lead_time_distribution
+
+Example:
+
+ Revenue Trend:
+http://127.0.0.1:8000/api/analytics?metric=revenue_trend
+
+{
+  "2022-01": 5200,
+  "2022-02": 6150,
+  "2022-03": 7000
+}
+ Cancellation Rate:
+http://127.0.0.1:8000/api/analytics?metric=cancellation_rate
+
+{
+  "cancelled": 23.5,
+  "not_cancelled": 76.5
+}
+ Geographical Distribution:
+http://127.0.0.1:8000/api/analytics?metric=geographical_distribution
+
+{
+  "USA": 45,
+  "India": 35,
+  "UK": 20
+}
+ Lead Time Distribution:
+http://127.0.0.1:8000/api/analytics?metric=lead_time_distribution
+
+{
+  "0-7 days": 25,
+  "8-30 days": 50,
+  "31+ days": 25
+}
 ##  Sample Test Queries & Expected Responses
 
 | Query | Expected Response (Example) |
