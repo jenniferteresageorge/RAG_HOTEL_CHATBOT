@@ -35,12 +35,18 @@ This project is a Retrieval-Augmented Generation (RAG) based chatbot built using
    git clone https://github.com/jenniferteresageorge/RAG_HOTEL_CHATBOT.git
    cd hotel-rag-chatbot
 
-2. Install dependencies:
+
+2. Create a virtual environment:
+``
+  python -m venv .venv
+  source .venv/bin/activate  # Linux/macOS
+  .venv\Scripts\activate     # Windows
+   
+3. Install dependencies:
     ``
     pip install -r requirements.txt
 
-
-3. Run the app:
+4. Run the app:
     ``
     uvicorn main:app --reload
 
