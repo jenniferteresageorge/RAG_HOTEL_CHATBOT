@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pandas
+numpy
+sentence-transformers
+faiss-cpu
+transformers
+torch
+cohere
+python-dotenv
+matplotlib
+seaborn
