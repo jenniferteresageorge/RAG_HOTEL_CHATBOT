@@ -32,7 +32,7 @@ This project is a Retrieval-Augmented Generation (RAG) based chatbot built using
 
 1. Clone the repo:
    ``
-   git clone https://github.com/your-org/hotel-rag-chatbot
+   git clone https://github.com/jenniferteresageorge/RAG_HOTEL_CHATBOT.git
    cd hotel-rag-chatbot
 
 2. Install dependencies:
